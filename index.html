@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>www.Ninote.com</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-content">
+          <h1 class="app-title">
+            <i class="fas fa-tasks"></i>
+            Ninote
+          </h1>
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            title="Toggle Dark/Light Mode"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- Add Task Form -->
+      <div class="add-task-section">
+        <form class="task-form" id="taskForm">
+          <div class="form-group">
+            <div class="input-wrapper">
+              <i class="fas fa-edit input-icon"></i>
+              <input
+                type="text"
+                id="taskInput"
+                placeholder="What needs to be done?"
+                class="task-input"
+                required
+              />
+            </div>
+            <div class="input-wrapper">
+              <i class="fas fa-calendar input-icon"></i>
+              <input type="date" id="dateInput" class="date-input" required />
+            </div>
+            <button type="submit" class="add-btn" title="Add new task">
+              <i class="fas fa-plus"></i>
+              <span>Add Task</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Filter Section -->
+      <div class="filter-section">
+        <div class="filter-controls">
+          <div class="search-wrapper">
+            <i class="fas fa-search search-icon"></i>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search tasks by name..."
+              class="search-input"
+            />
+          </div>
+          <div class="date-filter-wrapper">
+            <i class="fas fa-filter filter-icon"></i>
+            <input
+              type="date"
+              id="filterDate"
+              class="filter-date"
+              title="Filter by date"
+            />
+          </div>
+          <button
+            type="button"
+            class="clear-filter-btn"
+            id="clearFilter"
+            title="Clear all filters"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Task List -->
+      <div class="task-list-section">
+        <div class="task-stats">
+          <span class="task-count" id="taskCount">0 tasks</span>
+          <button
+            type="button"
+            class="clear-all-btn"
+            id="clearAll"
+            title="Clear all tasks"
+          >
+            <i class="fas fa-trash-alt"></i>
+            Clear All
+          </button>
+        </div>
+        <div class="task-list-container">
+          <div class="task-list" id="taskList">
+            <div class="empty-state" id="emptyState">
+              <i class="fas fa-clipboard-list"></i>
+              <h3>No tasks yet</h3>
+              <p>Add a new task to get started!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>&copy; 2025 N i n o. All rights reserved.</p>
+      </footer>
+
+      <!-- Notification -->
+      <div class="notification" id="notification">
+        <i class="notification-icon"></i>
+        <span class="notification-text"></span>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
